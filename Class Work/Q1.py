@@ -21,3 +21,4 @@ for num in numbers:
 
 print("Smallest number is:", smallest)
 print("Largest number is:", largest)
+
