@@ -1,0 +1,50 @@
+=== Q4.1 Randomized quickselect ===
+quickselect == sorted(a)[k-1] on 500 random arrays (with duplicates).
+n=   10,000  quickselect=0.0027s  merge sort+index=0.0200s (7.3x)  sorted()+index=0.0012s
+n=   30,000  quickselect=0.0080s  merge sort+index=0.0533s (6.6x)  sorted()+index=0.0055s
+n=  100,000  quickselect=0.0233s  merge sort+index=0.2216s (9.5x)  sorted()+index=0.0166s
+n=  300,000  quickselect=0.0993s  merge sort+index=0.8681s (8.7x)  sorted()+index=0.0550s
+n=1,000,000  quickselect=0.3660s  merge sort+index=3.1447s (8.6x)  sorted()+index=0.3190s
+Saved ../results/q4_quickselect.{md,png}
+
+=== Q4.2 Miller-Rabin vs trial division ===
+| n (12 digits) | trial division | Miller-Rabin (20 rounds) | MR time (us) | trial time (us) |
+| --- | --- | --- | --- | --- |
+| 223,005,401,501 | prime | prime | 233.0 | 19,064.1 |
+| 911,856,239,313 | composite | composite | 14.9 | 0.5 |
+| 367,469,214,295 | composite | composite | 13.0 | 0.4 |
+| 251,282,538,206 | composite | composite | 0.3 | 0.3 |
+| 214,832,269,481 | composite | composite | 11.6 | 30.3 |
+| 914,655,221,101 | composite | composite | 13.5 | 0.9 |
+| 700,832,336,208 | composite | composite | 0.3 | 0.2 |
+| 748,913,461,122 | composite | composite | 0.2 | 0.2 |
+| 136,171,878,809 | composite | composite | 13.1 | 10.6 |
+| 198,912,225,902 | composite | composite | 0.2 | 0.2 |
+| 354,342,113,419 | composite | composite | 12.5 | 0.5 |
+| 763,595,448,017 | composite | composite | 13.6 | 3.3 |
+| 714,294,294,451 | composite | composite | 14.0 | 5.8 |
+| 886,833,016,361 | prime | prime | 254.5 | 36,998.3 |
+| 871,590,378,377 | composite | composite | 15.0 | 4.1 |
+| 561,902,006,518 | composite | composite | 0.2 | 0.2 |
+| 590,573,056,992 | composite | composite | 0.2 | 0.2 |
+| 407,473,554,860 | composite | composite | 0.2 | 0.2 |
+| 933,251,567,391 | composite | composite | 13.2 | 0.3 |
+| 275,259,659,197 | prime | prime | 254.0 | 20,926.7 |
+
+Both methods agree on all 20 numbers (3 prime). Total time: Miller-Rabin 0.88 ms, trial division 77.05 ms
+
+Extra: worst case for trial division, 5 random 12-digit primes
+| 12-digit prime | Miller-Rabin (us) | trial division (ms) | trial / MR |
+| --- | --- | --- | --- |
+| 840,633,436,777 | 242.8 | 37.9 | 156x |
+| 597,707,816,159 | 238.4 | 31.7 | 133x |
+| 116,633,204,627 | 255.7 | 14.2 | 55x |
+| 439,982,645,429 | 223.2 | 27.2 | 122x |
+| 357,991,902,637 | 261.0 | 24.9 | 95x |
+
+=== Q4.3 Carmichael number 561 ===
+Miller-Rabin, 1 round, on 561 x 1000: answered 'prime' 13 times (1.3%), 'composite' 987 times
+Exact: strong liars for 561 among a = 2..559: [50, 101, 103, 256, 305, 458, 460, 511]
+  -> 8/558 = 1.43% chance per round (theory bound: at most 25%)
+For comparison, the Fermat test a^(n-1) = 1 is fooled by 318/558 = 57.0% of bases (every base coprime to 561, because 561 is a Carmichael number)
+Probability that k rounds all say 'prime': 1 round 0.0143, 5 rounds 6.06e-10, 20 rounds 1.35e-37

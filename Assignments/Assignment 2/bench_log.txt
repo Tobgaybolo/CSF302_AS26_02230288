@@ -1,0 +1,9 @@
+macOS-26.3.1-arm64-arm-64bit | Python 3.9.6 | arm
+n=  1000  brute=0.078 s  d&c=0.0049 s
+n=  2000  brute=0.299 s  d&c=0.0107 s
+n=  4000  brute=1.214 s  d&c=0.0237 s
+n=  8000  brute=4.934 s  d&c=0.0529 s
+n= 16000  brute=19.588 s  d&c=0.1152 s
+n= 32000  brute=> 60 s (stopped)  d&c=0.2531 s
+n= 64000  brute=> 60 s (stopped)  d&c=0.5798 s
+first n where d&c faster: 39 | faster from then on: 39

@@ -1,0 +1,10 @@
+Lab report: Dynamic Programming
+Author: Student
+Date: 18 November 2026
+Q1 rod cutting uses a price table.
+The naive version is exponential.
+Memoization stores results.
+Bottom-up fills a table.
+Q3 LCS compares two strings.
+Q4 optimal BST is optional.
+End of report.

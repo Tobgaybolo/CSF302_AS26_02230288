@@ -1,0 +1,7 @@
+Huffman code table for ../data/texts/dna.txt
+char	freq	code
+T	5050	11
+C	5034	10
+A	5027	01
+G	4889	001
+\n	1	000

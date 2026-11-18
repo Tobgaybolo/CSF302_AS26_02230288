@@ -1,0 +1,109 @@
+
+=== ../data/texts/english.txt ===
+characters = 2,935, distinct = 50
+  char    freq  code
+   ' '     497  111
+     e     329  011
+     t     217  1100
+     a     196  1011
+     s     170  1000
+     i     157  0100
+     r     153  0010
+     o     152  0001
+     n     130  0000
+     h     117  11010
+     c      90  10011
+     l      87  01011
+     m      78  00111
+     d      75  00110
+     p      57  110110
+   ...   (30 more rows in results file)
+     B       1  110111011011
+     H       1  110111011100
+     K       1  110111011101
+     M       1  110111011110
+     P       1  110111011111
+first 64 encoded bits: 1101110101100100110110011001010011110110101110100100010010010011...
+decoded == original: True
+Huffman bits = 12,744  vs  8-bit fixed = 23,480  -> ratio 0.543 (45.7% smaller)
+average code length 4.342 bits/char, entropy 4.314, best fixed-length code would need 6 bits/char
+
+=== ../data/texts/source_code.txt ===
+characters = 11,691, distinct = 81
+  char    freq  code
+   ' '    2516  01
+     e     681  1001
+     t     668  1000
+     -     649  0010
+     i     575  0000
+     a     548  11111
+     s     494  11101
+     r     442  11001
+     n     439  11000
+     o     340  00111
+    \n     282  00010
+     l     242  111001
+     )     232  111000
+     (     231  110111
+     c     230  110110
+   ...   (61 more rows in results file)
+     V       2  1111001110111
+     Y       2  000110110100
+     ;       1  0001101101010
+     j       1  0001101101011
+     z       1  1111001000100
+first 64 encoded bits: 1111010111101011110100001010111101011111001011101011010011111001...
+decoded == original: True
+Huffman bits = 55,996  vs  8-bit fixed = 93,528  -> ratio 0.599 (40.1% smaller)
+average code length 4.790 bits/char, entropy 4.762, best fixed-length code would need 7 bits/char
+
+=== ../data/texts/dna.txt ===
+characters = 20,001, distinct = 5
+  char    freq  code
+     T    5050  11
+     C    5034  10
+     A    5027  01
+     G    4889  001
+    \n       1  000
+first 64 encoded bits: 0101001101010010111010101101001101110110010110110010011010001010...
+decoded == original: True
+Huffman bits = 44,892  vs  8-bit fixed = 160,008  -> ratio 0.281 (71.9% smaller)
+average code length 2.244 bits/char, entropy 2.001, best fixed-length code would need 3 bits/char
+
+=== ../data/texts/random_printable.txt ===
+characters = 20,001, distinct = 96
+  char    freq  code
+     Z     251  100000
+     ,     240  011111
+     a     239  011110
+     q     236  011101
+     F     233  011100
+     ^     232  011011
+     [     231  011010
+     d     230  011000
+     {     230  011001
+     .     229  010111
+     2     228  010110
+     M     227  010101
+     A     226  010100
+     3     225  010001
+     :     225  010010
+   ...   (76 more rows in results file)
+     S     191  1000100
+     p     191  1000101
+     +     188  1000011
+     w     176  10000101
+    \n       1  10000100
+first 64 encoded bits: 0110111011110110111110110010001101110011101000111011111101010101...
+decoded == original: True
+Huffman bits = 132,740  vs  8-bit fixed = 160,008  -> ratio 0.830 (17.0% smaller)
+average code length 6.637 bits/char, entropy 6.567, best fixed-length code would need 7 bits/char
+
+| file | chars | distinct | 8-bit size (bits) | Huffman (bits) | ratio | saving | avg bits/char | entropy | fixed ⌈log2 n⌉ |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| english.txt | 2935 | 50 | 23480 | 12744 | 0.543 | 45.7% | 4.342 | 4.314 | 6 |
+| source_code.txt | 11691 | 81 | 93528 | 55996 | 0.599 | 40.1% | 4.790 | 4.762 | 7 |
+| dna.txt | 20001 | 5 | 160008 | 44892 | 0.281 | 71.9% | 2.244 | 2.001 | 3 |
+| random_printable.txt | 20001 | 96 | 160008 | 132740 | 0.830 | 17.0% | 6.637 | 6.567 | 7 |
+
+Saved ../results/q2_huffman.md and q2_codes_*.txt

@@ -1,0 +1,50 @@
+=== Q3.1  LCS table for X = ABCBDAB, Y = BDCABA  (arrow + length) ===
+           j=0   j=1   j=2   j=3   j=4   j=5   j=6
+                   B     D     C     A     B     A
+i=0          0     0     0     0     0     0     0
+i=1 A        0    ↑0    ↑0    ↑0    ↖1    ←1    ↖1
+i=2 B        0    ↖1    ←1    ←1    ↑1    ↖2    ←2
+i=3 C        0    ↑1    ↑1    ↖2    ←2    ↑2    ↑2
+i=4 B        0    ↖1    ↑1    ↑2    ↑2    ↖3    ←3
+i=5 D        0    ↑1    ↖2    ↑2    ↑2    ↑3    ↑3
+i=6 A        0    ↑1    ↑2    ↑2    ↖3    ↑3    ↖4
+i=7 B        0    ↖1    ↑2    ↑2    ↑3    ↖4    ↑4
+
+=== Q3.2  One LCS: BCBA (length 4)
+=== Q3.3  Two-row length: 4
+           brute-force check: BCBA (length 4)
+
+=== Q3.4  Timing DP vs brute force ===
+len= 5  LCS length= 2  DP=     4.6 us  brute=   0.0000 s  ratio=         5x
+len= 6  LCS length= 3  DP=     5.4 us  brute=   0.0001 s  ratio=         9x
+len= 7  LCS length= 5  DP=     6.9 us  brute=   0.0001 s  ratio=        13x
+len= 8  LCS length= 4  DP=     9.2 us  brute=   0.0002 s  ratio=        25x
+len= 9  LCS length= 6  DP=    11.2 us  brute=   0.0004 s  ratio=        38x
+len=10  LCS length= 6  DP=    12.5 us  brute=   0.0009 s  ratio=        74x
+len=11  LCS length= 6  DP=    15.4 us  brute=   0.0019 s  ratio=       125x
+len=12  LCS length= 7  DP=    23.1 us  brute=   0.0049 s  ratio=       213x
+len=13  LCS length= 6  DP=    24.1 us  brute=   0.0117 s  ratio=       488x
+len=14  LCS length= 6  DP=    26.2 us  brute=   0.0288 s  ratio=     1,102x
+len=15  LCS length= 7  DP=    40.0 us  brute=   0.0433 s  ratio=     1,082x
+len=16  LCS length= 7  DP=    39.0 us  brute=   0.1332 s  ratio=     3,412x
+len=17  LCS length=12  DP=    40.8 us  brute=   0.2039 s  ratio=     4,993x
+len=18  LCS length= 8  DP=    34.9 us  brute=   0.4647 s  ratio=    13,320x
+Saved ../results/q3_lcs_timing.{csv,md,png}
+
+=== Q3.5  Diff of data/old.txt and data/new.txt ===
+--- ../data/old.txt
++++ ../data/new.txt
+  Lab report: Dynamic Programming
+  Author: Student
++ Date: 18 November 2026
+  Q1 rod cutting uses a price table.
+- The naive version is slow.
++ The naive version is exponential.
+  Memoization stores results.
+  Bottom-up fills a table.
+- Q2 matrix chain finds the best order.
+  Q3 LCS compares two strings.
++ Q4 optimal BST is optional.
+  End of report.
+
+7 unchanged (LCS length = 7), 2 removed, 3 added

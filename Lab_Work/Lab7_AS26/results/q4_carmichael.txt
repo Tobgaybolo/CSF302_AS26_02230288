@@ -1,0 +1,3 @@
+561, 1 round x 1000: 'prime' 13 times (1.3%)
+strong liars: [50, 101, 103, 256, 305, 458, 460, 511] (8/558)
+Fermat liars: 318/558

@@ -1,0 +1,47 @@
+d= 2 n=   16  naive=4.5991e-05s  binary=1.6174e-05s  speed-up=2.8x
+d= 2 n=   32  naive=8.5193e-05s  binary=1.7633e-05s  speed-up=4.8x
+d= 2 n=   64  naive=1.9013e-04s  binary=2.3101e-05s  speed-up=8.2x
+d= 2 n=  128  naive=3.3789e-04s  binary=2.5673e-05s  speed-up=13.2x
+d= 2 n=  256  naive=7.0123e-04s  binary=2.7201e-05s  speed-up=25.8x
+d= 2 n=  512  naive=1.3993e-03s  binary=3.0400e-05s  speed-up=46.0x
+d= 2 n= 1024  naive=2.7885e-03s  binary=3.3773e-05s  speed-up=82.6x
+d= 2 n= 2048  naive=5.5768e-03s  binary=3.6607e-05s  speed-up=152.3x
+d= 2 n= 4096  naive=1.1180e-02s  binary=3.8750e-05s  speed-up=288.5x
+d= 4 n=   16  naive=1.4396e-04s  binary=4.8480e-05s  speed-up=3.0x
+d= 4 n=   32  naive=2.7685e-04s  binary=5.7829e-05s  speed-up=4.8x
+d= 4 n=   64  naive=5.7809e-04s  binary=6.2296e-05s  speed-up=9.3x
+d= 4 n=  128  naive=1.0913e-03s  binary=7.0615e-05s  speed-up=15.5x
+d= 4 n=  256  naive=2.1582e-03s  binary=8.9103e-05s  speed-up=24.2x
+d= 4 n=  512  naive=4.2971e-03s  binary=9.7293e-05s  speed-up=44.2x
+d= 4 n= 1024  naive=9.0020e-03s  binary=1.0278e-04s  speed-up=87.6x
+d= 4 n= 2048  naive=1.8188e-02s  binary=1.1142e-04s  speed-up=163.2x
+d= 4 n= 4096  naive=3.6397e-02s  binary=1.0800e-04s  speed-up=337.0x
+d= 8 n=   16  naive=7.2579e-04s  binary=2.5972e-04s  speed-up=2.8x
+d= 8 n=   32  naive=1.5160e-03s  binary=2.4822e-04s  speed-up=6.1x
+d= 8 n=   64  naive=2.9752e-03s  binary=3.1315e-04s  speed-up=9.5x
+d= 8 n=  128  naive=5.6654e-03s  binary=3.5037e-04s  speed-up=16.2x
+d= 8 n=  256  naive=1.1524e-02s  binary=4.1962e-04s  speed-up=27.5x
+d= 8 n=  512  naive=2.4228e-02s  binary=4.2141e-04s  speed-up=57.5x
+d= 8 n= 1024  naive=4.8721e-02s  binary=5.3681e-04s  speed-up=90.8x
+d= 8 n= 2048  naive=1.1076e-01s  binary=6.8313e-04s  speed-up=162.1x
+d= 8 n= 4096  naive=2.0693e-01s  binary=4.3931e-04s  speed-up=471.0x
+d=16 n=   16  naive=3.2621e-03s  binary=1.0450e-03s  speed-up=3.1x
+d=16 n=   32  naive=6.4983e-03s  binary=1.2101e-03s  speed-up=5.4x
+d=16 n=   64  naive=1.6076e-02s  binary=1.4609e-03s  speed-up=11.0x
+d=16 n=  128  naive=3.2918e-02s  binary=2.0195e-03s  speed-up=16.3x
+d=16 n=  256  naive=5.6836e-02s  binary=1.8679e-03s  speed-up=30.4x
+d=16 n=  512  naive=1.2981e-01s  binary=2.1490e-03s  speed-up=60.4x
+d=16 n= 1024  naive=2.8059e-01s  binary=3.6475e-03s  speed-up=76.9x
+d=16 n= 2048  naive=5.7929e-01s  binary=2.5035e-03s  speed-up=231.4x
+d=16 n= 4096  naive=1.3010e+00s  binary=4.1728e-03s  speed-up=311.8x
+d=32 n=   16  naive=3.8710e-02s  binary=9.5071e-03s  speed-up=4.1x
+d=32 n=   32  naive=5.0525e-02s  binary=9.2192e-03s  speed-up=5.5x
+d=32 n=   64  naive=1.0372e-01s  binary=1.1078e-02s  speed-up=9.4x
+d=32 n=  128  naive=2.5600e-01s  binary=1.2002e-02s  speed-up=21.3x
+d=32 n=  256  naive=4.9596e-01s  binary=1.6859e-02s  speed-up=29.4x
+d=32 n=  512  naive=1.0557e+00s  binary=2.1726e-02s  speed-up=48.6x
+d=32 n= 1024  naive=1.9638e+00s  binary=2.3516e-02s  speed-up=83.5x
+d=32 n= 2048  naive=4.5695e+00s  binary=1.7455e-02s  speed-up=261.8x
+d=32 n= 4096  naive=9.1053e+00s  binary=3.6589e-02s  speed-up=248.9x
+
+Saved ../results/b9_benchmark.{csv,md,png}

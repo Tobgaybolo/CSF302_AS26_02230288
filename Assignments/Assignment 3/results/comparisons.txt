@@ -1,0 +1,5 @@
+random    improved=1,751,263  sorted()=  937,903  ratio=1.87
+sorted    improved=1,849,634  sorted()=   63,999  ratio=28.90
+dups 0-9  improved=  365,055  sorted()=  452,463  ratio=0.81
+recursion depth, n=4,000 sorted: basic 3999  improved 7
+recursion depth, n=64,000 sorted: improved 9 (basic would need n-1 = 63,999)

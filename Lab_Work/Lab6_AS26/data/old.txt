@@ -1,0 +1,9 @@
+Lab report: Dynamic Programming
+Author: Student
+Q1 rod cutting uses a price table.
+The naive version is slow.
+Memoization stores results.
+Bottom-up fills a table.
+Q2 matrix chain finds the best order.
+Q3 LCS compares two strings.
+End of report.
